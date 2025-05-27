@@ -1,0 +1,33 @@
+{
+  "immediateReplace": true,
+  "suggester": true,
+  "historyPriority": true,
+  "historyLimit": 100,
+  "history": [
+    ":question:",
+    ":writing_hand:",
+    ":white_check_mark:",
+    ":rocket:",
+    ":smiley:",
+    ":sparkles:",
+    ":test_tube:",
+    ":thinking:",
+    ":books:",
+    ":palm_tree:",
+    ":gear:",
+    ":alarm_clock:",
+    ":warning:",
+    ":stop_sign:",
+    ":robot:",
+    ":wrench:",
+    ":pushpin:",
+    ":globe_with_meridians:",
+    ":point_left:",
+    ":cup_with_straw:",
+    ":trophy:",
+    ":date:",
+    ":slightly_smiling_face:",
+    ":hammer_and_wrench:",
+    ":smile:"
+  ]
+}

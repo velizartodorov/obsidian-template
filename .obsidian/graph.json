@@ -1,0 +1,65 @@
+{
+  "collapse-filter": false,
+  "search": "",
+  "showTags": true,
+  "showAttachments": false,
+  "hideUnresolved": true,
+  "showOrphans": true,
+  "collapse-color-groups": true,
+  "colorGroups": [
+    {
+      "query": "path:(/\\d{4}-\\d{2} Daily Standup/)",
+      "color": {
+        "a": 1,
+        "rgb": 3669760
+      }
+    },
+    {
+      "query": "bug",
+      "color": {
+        "a": 1,
+        "rgb": 14701138
+      }
+    },
+    {
+      "query": "tech",
+      "color": {
+        "a": 1,
+        "rgb": 5431473
+      }
+    },
+    {
+      "query": "path:(/Retro meeting \\d{2}-\\d{2}-\\d{4}/)",
+      "color": {
+        "a": 1,
+        "rgb": 13652704
+      }
+    },
+    {
+      "query": "pull request",
+      "color": {
+        "a": 1,
+        "rgb": 16774912
+      }
+    },
+    {
+      "query": "OPSESC",
+      "color": {
+        "a": 1,
+        "rgb": 5395168
+      }
+    }
+  ],
+  "collapse-display": true,
+  "showArrow": true,
+  "textFadeMultiplier": -3,
+  "nodeSizeMultiplier": 2.20363825363825,
+  "lineSizeMultiplier": 0.777442827442827,
+  "collapse-forces": false,
+  "centerStrength": 0.595634095634096,
+  "repelStrength": 20,
+  "linkStrength": 0.35031185031185,
+  "linkDistance": 500,
+  "scale": 0.07714515420807709,
+  "close": true
+}
