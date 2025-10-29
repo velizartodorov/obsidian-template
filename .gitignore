@@ -6,6 +6,25 @@
 !topics/
 !.gitignore
 
+# Ignore user-specific Obsidian files
+.obsidian/workspace.json
+
 # Ignore everything in topics except templates
 /topics/*
 !/topics/templates/
+
+# In templates, ignore everything except current files
+/topics/templates/*
+!/topics/templates/Absence note DD-MM-YYYY template.md
+!/topics/templates/MM-2025-Daily-Standup template.md
+!/topics/templates/Note template.md
+!/topics/templates/OPSESC-XXXX.md
+!/topics/templates/PROJECT-NUMBER Ticket template.md
+!/topics/templates/Pull request medium template.md
+!/topics/templates/Pull request remarks template.md
+!/topics/templates/Pull request short template.md
+!/topics/templates/Pull request template.md
+!/topics/templates/Reflection talk DD-MM-YYYY template.md
+!/topics/templates/Retro meeting  DD-MM-YYYY template.md
+!/topics/templates/Sprint planning DD-MM-YYYY template.md
+!/topics/templates/Sprint review  DD-MM-YYYY template.md
