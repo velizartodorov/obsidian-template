@@ -1,8 +1,6 @@
 [
   "darlal-switcher-plus",
   "reveal-active-file-button",
-  "copy-image",
-  "obsidian-format-code",
   "obsidian-plugin-prettier",
   "obsidian-prozen",
   "homepage",
@@ -16,14 +14,18 @@
   "note-gallery",
   "mlir-syntax-highlight",
   "pane-relief",
-  "emoji-shortcodes",
-  "obsidian-excalidraw-plugin",
   "obsidian-vault-statistics-plugin",
   "obsidian-table-to-csv-exporter",
   "obsidian-bulk-rename-plugin",
-  "obsidian-diagrams-net",
   "codeblock-customizer",
   "obsidian-editor-shortcuts",
   "obsidian-tagfolder",
-  "colored-text"
+  "colored-text",
+  "copy-image",
+  "obsidian-diagrams-net",
+  "emoji-shortcodes",
+  "obsidian-excalidraw-plugin",
+  "obsidian-format-code",
+  "mermaid-themes",
+  "code-styler"
 ]

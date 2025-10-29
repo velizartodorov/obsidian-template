@@ -2,7 +2,7 @@
   "switcher:open": [
     {
       "modifiers": [
-        "Mod",
+        "Ctrl",
         "Shift"
       ],
       "key": "R"
@@ -16,13 +16,12 @@
       "key": "1"
     }
   ],
-  "workspace:goto-tab-1": [],
-  "global-search:open": [
+  "workspace:goto-tab-1": [
     {
       "modifiers": [
-        "Mod"
+        "Ctrl"
       ],
-      "key": "H"
+      "key": "1"
     }
   ],
   "editor:open-search-replace": [
@@ -36,24 +35,15 @@
   "workspace:edit-file-title": [
     {
       "modifiers": [
-        "Alt",
-        "Shift"
+        "Ctrl"
       ],
       "key": "R"
-    }
-  ],
-  "outline:open": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "O"
     }
   ],
   "obsidian-editor-shortcuts:copyLineDown": [
     {
       "modifiers": [
-        "Alt",
+        "Ctrl",
         "Mod"
       ],
       "key": "ArrowDown"
@@ -62,7 +52,7 @@
   "obsidian-editor-shortcuts:copyLineUp": [
     {
       "modifiers": [
-        "Alt",
+        "Ctrl",
         "Mod"
       ],
       "key": "ArrowUp"
@@ -71,7 +61,7 @@
   "obsidian-editor-shortcuts:goToPrevHeading": [
     {
       "modifiers": [
-        "Mod",
+        "Ctrl",
         "Shift"
       ],
       "key": "ArrowUp"
@@ -80,7 +70,7 @@
   "obsidian-editor-shortcuts:goToNextHeading": [
     {
       "modifiers": [
-        "Mod",
+        "Ctrl",
         "Shift"
       ],
       "key": "ArrowDown"
@@ -92,7 +82,7 @@
   "obsidian-editor-shortcuts:deleteLine": [
     {
       "modifiers": [
-        "Mod"
+        "Ctrl"
       ],
       "key": "D"
     }
@@ -101,7 +91,7 @@
   "obsidian-plugin-prettier:format-note": [
     {
       "modifiers": [
-        "Mod",
+        "Ctrl",
         "Shift"
       ],
       "key": "F"
@@ -111,22 +101,6 @@
     {
       "modifiers": [],
       "key": "F8"
-    }
-  ],
-  "window:zoom-in": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "="
-    }
-  ],
-  "window:zoom-out": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "-"
     }
   ],
   "slides:start": [
@@ -147,7 +121,7 @@
   "file-explorer:move-file": [
     {
       "modifiers": [
-        "Mod"
+        "Ctrl"
       ],
       "key": "M"
     }
@@ -166,5 +140,159 @@
   ],
   "file-explorer:new-file-in-new-pane": [],
   "pane-relief:go-next": [],
-  "pane-relief:go-prev": []
+  "pane-relief:go-prev": [],
+  "workspace:new-tab": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "T"
+    }
+  ],
+  "workspace:close": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "W"
+    }
+  ],
+  "obsidian-editor-shortcuts:duplicateLine": [],
+  "outline:open-for-current": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "O"
+    }
+  ],
+  "file-explorer:new-file": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "N"
+    }
+  ],
+  "window:zoom-in": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "="
+    }
+  ],
+  "window:zoom-out": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "-"
+    }
+  ],
+  "editor:toggle-italics": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "I"
+    }
+  ],
+  "editor:toggle-bold": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "B"
+    }
+  ],
+  "global-search:open": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "H"
+    }
+  ],
+  "editor:open-search": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "F"
+    }
+  ],
+  "editor:save-file": [],
+  "workspace:goto-tab-2": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "2"
+    }
+  ],
+  "workspace:goto-tab-3": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "3"
+    }
+  ],
+  "workspace:goto-tab-4": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "4"
+    }
+  ],
+  "workspace:goto-tab-5": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "5"
+    }
+  ],
+  "workspace:goto-tab-6": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "6"
+    }
+  ],
+  "workspace:goto-tab-7": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "7"
+    }
+  ],
+  "workspace:goto-tab-8": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "8"
+    }
+  ],
+  "graph:open": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "G"
+    }
+  ],
+  "editor:insert-link": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "K"
+    }
+  ]
 }

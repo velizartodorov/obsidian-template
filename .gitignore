@@ -1,1 +1,11 @@
-/.idea/
+# Ignore everything at root
+/*
+
+# Allow specific folders
+!.obsidian/
+!topics/
+!.gitignore
+
+# Ignore everything in topics except templates
+/topics/*
+!/topics/templates/

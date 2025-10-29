@@ -16,5 +16,6 @@
     "downscalePercent": 80
   },
   "newFileLocation": "current",
-  "showUnsupportedFiles": true
+  "showUnsupportedFiles": true,
+  "autoConvertHtml": false
 }
