@@ -43,10 +43,10 @@
   "obsidian-editor-shortcuts:copyLineDown": [
     {
       "modifiers": [
-        "Ctrl",
-        "Mod"
+        "Alt",
+        "Ctrl"
       ],
-      "key": "ArrowDown"
+      "key": "ArrowUp"
     }
   ],
   "obsidian-editor-shortcuts:copyLineUp": [
@@ -56,6 +56,13 @@
         "Mod"
       ],
       "key": "ArrowUp"
+    },
+    {
+      "modifiers": [
+        "Alt",
+        "Ctrl"
+      ],
+      "key": "ArrowDown"
     }
   ],
   "obsidian-editor-shortcuts:goToPrevHeading": [

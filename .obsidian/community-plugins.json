@@ -27,5 +27,9 @@
   "obsidian-excalidraw-plugin",
   "obsidian-format-code",
   "mermaid-themes",
-  "code-styler"
+  "code-styler",
+  "confluence-to-obsidian",
+  "marker-api",
+  "drawio-obsidian",
+  "dataview"
 ]
