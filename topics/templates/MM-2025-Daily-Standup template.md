@@ -1,6 +1,11 @@
 # MM-2025-Daily-Standup template
 
-![[Actions & Questions#Action points 📌]]
+## Tasks 📌
+
+```dataview
+TASK
+WHERE file.path = this.file.path
+```
 
 ## 01-MM-2025 ↔️ 15-MM-2025
 
@@ -10,5 +15,3 @@
 
 - test
 - test
-
-![[allow speakers.png]]
