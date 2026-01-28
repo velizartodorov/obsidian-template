@@ -16,7 +16,7 @@
 # In templates, ignore everything except current files
 /topics/templates/*
 !/topics/templates/Absence note DD-MM-YYYY template.md
-!/topics/templates/MM-2025-Daily-Standup template.md
+!/topics/templates/YYYY-MM-Daily-Standup template.md
 !/topics/templates/Note template.md
 !/topics/templates/OPSESC-XXXX.md
 !/topics/templates/PROJECT-NUMBER Ticket template.md
