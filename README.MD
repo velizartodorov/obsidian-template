@@ -69,7 +69,7 @@ obsidian-template/
 - **Tasks** - Task management template
 
 ### Daily Standup & Meetings
-- **MM-2025-Daily-Standup template** - Daily standup notes
+- **YYYY-MM-Daily-Standup template** - Daily standup notes
 - **Retro meeting DD-MM-YYYY template** - Retrospective meetings
 - **Sprint planning DD-MM-YYYY template** - Sprint planning
 - **Sprint review DD-MM-YYYY template** - Sprint review
