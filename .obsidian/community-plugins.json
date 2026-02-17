@@ -31,5 +31,6 @@
   "confluence-to-obsidian",
   "marker-api",
   "drawio-obsidian",
-  "dataview"
+  "dataview",
+  "slack-formatter"
 ]
