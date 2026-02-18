@@ -5,6 +5,9 @@
 !.obsidian/
 !topics/
 !.gitignore
+!.github/
+!.markdownlint.json
+!README.MD
 
 # Ignore user-specific Obsidian files
 .obsidian/workspace.json
