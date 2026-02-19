@@ -32,5 +32,6 @@
   "marker-api",
   "drawio-obsidian",
   "dataview",
-  "slack-formatter"
+  "slack-formatter",
+  "obsidian-autocomplete-plugin"
 ]

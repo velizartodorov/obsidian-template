@@ -5,5 +5,8 @@
   "baseFontSize": 14,
   "cssTheme": "",
   "baseFontSizeAction": true,
-  "textFontFamily": "Inter"
+  "textFontFamily": "Inter",
+  "enabledCssSnippets": [
+    "slides-smaller-headings"
+  ]
 }
