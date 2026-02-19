@@ -3,6 +3,7 @@
 /* Auto-scale slides to fit screen */
 .reveal .slides {
     width: 80% !important;
+    height: 85% !important;
 }
 
 .reveal .slides section > * {
