@@ -35,5 +35,6 @@
   "obsidian-autocomplete-plugin",
   "oz-clear-unused-images",
   "obsidian-trash-explorer",
-  "find-orphaned-images"
+  "find-orphaned-images",
+  "obsidian-linter"
 ]
