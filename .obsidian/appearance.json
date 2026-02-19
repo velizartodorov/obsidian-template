@@ -7,6 +7,7 @@
   "baseFontSizeAction": true,
   "textFontFamily": "Inter",
   "enabledCssSnippets": [
-    "slides-smaller-headings"
+    "slides-smaller-headings",
+    "presentation-styles"
   ]
 }
