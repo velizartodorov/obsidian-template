@@ -4,7 +4,6 @@
   "obsidian-plugin-prettier",
   "obsidian-prozen",
   "homepage",
-  "markdown-to-slack-message",
   "obsidian-filename-heading-sync",
   "obsidian-thumbnails",
   "obsidian-gallery",
@@ -33,5 +32,8 @@
   "drawio-obsidian",
   "dataview",
   "slack-formatter",
-  "obsidian-autocomplete-plugin"
+  "obsidian-autocomplete-plugin",
+  "oz-clear-unused-images",
+  "obsidian-trash-explorer",
+  "find-orphaned-images"
 ]

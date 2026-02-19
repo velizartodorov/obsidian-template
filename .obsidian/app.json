@@ -17,5 +17,6 @@
   },
   "newFileLocation": "current",
   "showUnsupportedFiles": true,
-  "autoConvertHtml": false
+  "autoConvertHtml": false,
+  "promptDelete": false
 }
