@@ -28,17 +28,22 @@ __export(main_exports, {
 });
 module.exports = __toCommonJS(main_exports);
 var import_obsidian = require("obsidian");
+var DEFAULT_SETTINGS = {
+  maxZoom: 5000
+};
 var MermaidZoomPlugin = class extends import_obsidian.Plugin {
   constructor() {
     super(...arguments);
     this.zoomStates = /* @__PURE__ */ new Map();
     this.defaultMinScale = 0.1;
-    this.defaultMaxScale = 5;
     this.defaultScale = 1;
     this.processedElements = /* @__PURE__ */ new WeakSet();
   }
-  onload() {
+  async onload() {
+    await this.loadSettings();
+    this.defaultMaxScale = this.settings.maxZoom / 100;
     console.debug("Loading Mermaid Zoom plugin");
+    this.addSettingTab(new MermaidZoomSettingTab(this.app, this));
     this.setupMutationObserver();
     this.app.workspace.onLayoutReady(() => {
       this.processAllMermaidDiagrams();
@@ -52,6 +57,12 @@ var MermaidZoomPlugin = class extends import_obsidian.Plugin {
     this.registerEvent(this.app.workspace.on("file-open", () => {
       setTimeout(() => this.processAllMermaidDiagrams(), 200);
     }));
+  }
+  async loadSettings() {
+    this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());
+  }
+  async saveSettings() {
+    await this.saveData(this.settings);
   }
   setupMutationObserver() {
     this.mutationObserver = new MutationObserver((mutations) => {
@@ -657,5 +668,30 @@ var MermaidZoomPlugin = class extends import_obsidian.Plugin {
     }
     this.zoomStates.clear();
     this.processedElements = /* @__PURE__ */ new WeakSet();
+  }
+};
+var MermaidZoomSettingTab = class extends import_obsidian.PluginSettingTab {
+  constructor(app, plugin) {
+    super(app, plugin);
+    this.plugin = plugin;
+  }
+  display() {
+    const { containerEl } = this;
+    containerEl.empty();
+    containerEl.createEl("h2", { text: "Mermaid Zoom Settings" });
+    new import_obsidian.Setting(containerEl)
+      .setName("Maximum zoom level (%)")
+      .setDesc("The maximum zoom percentage allowed for Mermaid diagrams (e.g. 5000 = 5000%)")
+      .addText(text => text
+        .setPlaceholder("5000")
+        .setValue(String(this.plugin.settings.maxZoom))
+        .onChange(async (value) => {
+          const num = parseInt(value);
+          if (!isNaN(num) && num > 0) {
+            this.plugin.settings.maxZoom = num;
+            this.plugin.defaultMaxScale = num / 100;
+            await this.plugin.saveSettings();
+          }
+        }));
   }
 };
