@@ -189,6 +189,7 @@ var MermaidZoomPlugin = class extends import_obsidian.Plugin {
     this.fitToContainer(container, contentWrapper, svg, state);
   }
   fitToContainer(container, contentWrapper, svg, state) {
+    const isPresentation = !!document.querySelector(".reveal .slides");
     const containerPadding = 16;
     const bottomPadding = 40;
     const availableWidth = container.clientWidth - containerPadding * 2;
@@ -197,10 +198,15 @@ var MermaidZoomPlugin = class extends import_obsidian.Plugin {
     const svgHeight = state.svgOriginalHeight;
     const scaleX = availableWidth / svgWidth;
     const scaleY = availableHeight / svgHeight;
-    const fitScale = Math.min(scaleX, scaleY, 1);
+    const fitScale = Math.min(scaleX, scaleY, isPresentation ? 1 : 1);
     state.scale = fitScale;
-    state.translateX = 0;
-    state.translateY = 0;
+
+    // Center the diagram
+    const scaledWidth = svgWidth * fitScale;
+    const scaledHeight = svgHeight * fitScale;
+    state.translateX = containerPadding + (availableWidth - scaledWidth) / 2;
+    state.translateY = containerPadding + (availableHeight - scaledHeight) / 2;
+
     this.updateTransform(contentWrapper, state);
   }
   openFullscreenModal(state) {
@@ -315,6 +321,13 @@ var MermaidZoomPlugin = class extends import_obsidian.Plugin {
     resetBtn.addEventListener("click", () => {
       this.fitToContainerModal(modalZoomContainer, modalContentWrapper, modalState);
     });
+    const centerBtn = document.createElement("button");
+    centerBtn.textContent = "\u2B47";
+    centerBtn.title = "Center diagram";
+    this.styleButton(centerBtn);
+    centerBtn.addEventListener("click", () => {
+      this.centerDiagram(modalZoomContainer, modalContentWrapper, modalState);
+    });
     const scaleIndicator = document.createElement("span");
     scaleIndicator.style.cssText = `
 			padding: 4px 8px;
@@ -328,6 +341,7 @@ var MermaidZoomPlugin = class extends import_obsidian.Plugin {
     controls.appendChild(zoomInBtn);
     controls.appendChild(zoomOutBtn);
     controls.appendChild(resetBtn);
+    controls.appendChild(centerBtn);
     controls.appendChild(scaleIndicator);
     content.appendChild(controls);
     modal.appendChild(header);
@@ -409,6 +423,17 @@ var MermaidZoomPlugin = class extends import_obsidian.Plugin {
     resetBtn.addEventListener("click", (e) => {
       e.stopPropagation();
       this.resetZoom(contentWrapper, state);
+    });
+    const centerBtn = controls.createEl("button", {
+      text: "\u2B47",
+      cls: "mermaid-zoom-btn",
+      title: "Center diagram"
+    });
+    this.styleButton(centerBtn);
+    centerBtn.title = "Center diagram";
+    centerBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      this.centerDiagram(state.container, contentWrapper, state);
     });
     const scaleIndicator = controls.createEl("span", {
       cls: "mermaid-zoom-scale"
@@ -669,6 +694,29 @@ var MermaidZoomPlugin = class extends import_obsidian.Plugin {
   }
   resetZoom(contentWrapper, state) {
     this.fitToContainer(state.container, contentWrapper, state.svg, state);
+  }
+  centerDiagram(container, contentWrapper, state) {
+    const isPresentation = !!document.querySelector(".reveal .slides");
+    const containerWidth = container.clientWidth;
+    const containerHeight = container.clientHeight;
+    const scaledWidth = state.svgOriginalWidth * state.scale;
+    const scaledHeight = state.svgOriginalHeight * state.scale;
+
+    if (isPresentation) {
+      // In presentation mode, account for padding and use the visible area
+      const padding = 16; // matches the padding in the container
+      const bottomPadding = 40; // matches the padding-bottom
+      const availableWidth = containerWidth - padding * 2;
+      const availableHeight = containerHeight - padding - bottomPadding;
+      state.translateX = padding + (availableWidth - scaledWidth) / 2;
+      state.translateY = padding + (availableHeight - scaledHeight) / 2;
+    } else {
+      // Normal mode centering
+      state.translateX = (containerWidth - scaledWidth) / 2;
+      state.translateY = (containerHeight - scaledHeight) / 2;
+    }
+
+    this.updateTransform(contentWrapper, state);
   }
   updateTransform(contentWrapper, state) {
     contentWrapper.style.transform = `translate(${state.translateX}px, ${state.translateY}px) scale(${state.scale})`;
