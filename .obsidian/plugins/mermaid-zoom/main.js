@@ -126,21 +126,36 @@ var MermaidZoomPlugin = class extends import_obsidian.Plugin {
     const containerWidth = Math.min(initialSvgWidth + 32, targetParent.clientWidth || 600);
     const containerHeight = Math.min(initialSvgHeight + 60, containerWidth);
     const container = createDiv("mermaid-zoom-container");
-    container.style.cssText = `
+    const isPresentation = !!document.querySelector(".reveal .slides");
+    let styleString = `
 			position: relative;
 			overflow: hidden;
-			width: ${containerWidth}px;
-			height: ${containerHeight}px;
-			min-width: 150px;
-			min-height: 100px;
 			background: var(--background-secondary);
 			border-radius: 8px;
 			border: 1px solid var(--background-modifier-border);
-			margin: 1em 0;
 			padding: 1em;
 			padding-bottom: 2.5em;
 			box-sizing: border-box;
 		`;
+    if (isPresentation) {
+      styleString += `
+			width: 90%;
+			height: 85vh;
+			margin: 0 auto;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		`;
+    } else {
+      styleString += `
+			width: ${containerWidth}px;
+			height: ${containerHeight}px;
+			min-width: 150px;
+			min-height: 100px;
+			margin: 1em 0;
+		`;
+    }
+    container.style.cssText = styleString;
     const contentWrapper = container.createDiv("mermaid-zoom-content");
     contentWrapper.style.cssText = `
 			transform-origin: 0 0;
