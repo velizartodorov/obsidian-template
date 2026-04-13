@@ -61,14 +61,33 @@
     margin: 0 auto !important;
 }
 
+/* Lists and bullets */
+.reveal ul,
+.reveal ol {
+    font-size: 0.55em !important;
+    width: 85% !important;
+    max-width: 85% !important;
+    margin: 0 auto !important;
+    display: block !important;
+}
+
+.reveal li {
+    font-size: 1em !important;
+    margin: 0.2em 0 !important;
+    padding: 0 !important;
+    text-align: left !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+}
+
 /* Code blocks - scale to screen */
 .reveal pre {
-    font-size: 0.6em !important;
+    font-size: 0.52em !important;
     width: 90% !important;
 }
 
 .reveal code {
-    font-size: 0.8em !important;
+    font-size: 0.68em !important;
 }
 
 /* Target Excalidraw containers */
